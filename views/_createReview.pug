@@ -1,0 +1,12 @@
+
+.login-form
+  h2.heading-secondary.ma-bt-lg Create your review
+  form.form.form--createReview#createReviewForm
+    .form__group
+      label.form__label(for='review') Write your review
+      textarea#review.form__input( name="review", type='text', placeholder='This tour is...', required, minlength='10')
+    .form__group
+      label.form__label(for='rating') Rating
+      input#rating.form__input(type='Number', placeholder='Rate between 1-5', required, min='1', max='5')     
+    .form__group
+      button.btn.btn--green.review-save(data-tour-id=`${firstBookedTour.tour.id}`, data-user-id=`${firstBookedTour.user.id}`) Submit

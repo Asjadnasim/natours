@@ -1,0 +1,20 @@
+extends base
+
+block content
+  main.main
+    h1.heading-secondary.tour-details Your Previously Booked Tour Details
+    table
+      thead
+        tr
+          th Tour Name
+          th Summary
+          th Price
+          th Paid
+      tbody
+        each tour in tours
+          tr
+            td= tour.name
+            td= tour.summary 
+            td= `$${tour.price}`
+            td
+              a.btn.btn--green.btn--small(href=`/bookedTour/${tour.slug}`) Details

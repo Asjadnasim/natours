@@ -1,0 +1,10 @@
+extends base
+
+include _reviewCard
+
+block content 
+  .reviews
+    each review in reviews.reverse()
+      +reviewCard(review)
+
+   

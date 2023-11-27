@@ -1,0 +1,26 @@
+extends base
+
+block content
+  main.main
+    .login-form
+      h2.heading-secondary.ma-bt-lg Sign up
+      form.form.form--signup#signupForm(enctype='multipart/form-data', method="POST")
+        .form__group
+          label.form__label(for='name') Full name
+          input#name.form__input(type='text', placeholder='Your name...', required)
+        .form__group
+          label.form__label(for='email') Email address
+          input#email.form__input(type='email', placeholder='you@example.com', required)
+        .form__group.ma-bt-md
+          label.form__label(for='password') Password
+          input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+        .form__group.ma-bt-md
+          label.form__label(for='password') Confirm Password
+          input#passwordConfirm.form__input(type='password', placeholder='••••••••', required, minlength='8')    
+        .form__group.form__photo-upload
+          input.form__upload(type='file', accept='image/*', id='photo', name='photo')
+          label(for='photo') Choose your photo
+          img.form__user-photo(src='/img/users/default.jpg', alt='Default Image')
+          
+        .form__group
+          button.btn.btn--green.btn-create Sign up
