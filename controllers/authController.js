@@ -64,7 +64,7 @@ const resizeUserPhoto = catchAsync(async (req, res, next) => {
   };
 
   const date = new Date().toLocaleDateString('en-Us', options);
-  console.log(date);
+  // console.log(date);
 
   req.file.filename = `user-createdAt-${date}-${Date.now()}.jpeg`;
 
@@ -82,7 +82,7 @@ const resizeUserPhoto = catchAsync(async (req, res, next) => {
 const signup = catchAsync(async (req, res, next) => {
   const newUser = await User.create(req.body);
 
-  console.log(newUser);
+  // console.log(newUser);
 
   const url = `${req.protocol}://${req.get('host')}/me`;
   // console.log(url);
